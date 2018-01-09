@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapp.MyEventBusIndex;
 import com.example.xhh.eventbusdemo.R;
 import com.example.xhh.eventbusdemo.event.MessageEvent;
 
@@ -42,9 +43,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button5 = (Button) findViewById(R.id.buttonid05);
         button5.setOnClickListener(this);
         textView = (TextView) findViewById(R.id.textviewid);
-//        注册eventBus
-        EventBus.getDefault().register(this);
 
+//        使用eventBus的索引
+        EventBus eventBus = EventBus.builder().addIndex(new MyEventBusIndex()).build();
+
+        try {
+            EventBus.builder().addIndex(new MyEventBusIndex()).installDefaultEventBus();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //        使用默认的索引
+        EventBus eventBus1 = EventBus.getDefault();
+        //        注册eventBus
+        eventBus1.register(this);
 
     }
 
