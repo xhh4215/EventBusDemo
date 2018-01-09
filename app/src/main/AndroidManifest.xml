@@ -10,17 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".ui.MainActivity"></activity>
+        <activity android:name=".ui.FristActivity">
 
         </activity>
-        <activity android:name=".ui.FristActivity" >
+        <activity android:name=".ui.SecondActivity" />
+        <activity android:name=".ui.ThreadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SecondActivity"></activity>
     </application>
 
 </manifest>
