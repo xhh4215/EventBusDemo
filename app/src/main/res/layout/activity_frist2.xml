@@ -5,16 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.xhh.eventbusdemo.ui.SecondActivity">
+    tools:context="com.example.xhh.eventbusdemo.ui.FristActivity">
 
     <Button
-        android:id="@+id/postButton"
+        android:id="@+id/buttonid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="运行在当前的线程" />
-
-    <TextView
-        android:id="@+id/postTextview"
+        android:text="粘性事件" />
+    <Button
+        android:id="@+id/buttonid2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="跳转"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textviewid"
+        android:gravity="center"
+        android:text="文本"
+        />
 </LinearLayout>
